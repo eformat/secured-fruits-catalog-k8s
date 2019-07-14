@@ -103,7 +103,7 @@ data:
             "+"
           ],
           "redirectUris": [
-            "https://fruits-catalog/*"
+            "https://fruits-catalog-fruits-catalog.apps.foo.sandbox373.opentlc.com/*"
           ]
         },
         {
