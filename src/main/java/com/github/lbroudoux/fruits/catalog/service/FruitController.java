@@ -19,16 +19,16 @@ import com.github.lbroudoux.fruits.catalog.repository.FruitRepository;
 @RestController
 public class FruitController {
 
-  @Autowired
-  private FruitRepository repository;
+    @Autowired
+    private FruitRepository repository;
 
-  @RequestMapping(value = "/api/fruits", method = RequestMethod.GET)
-  public List<Fruit> listFruits() {
-    return repository.findAll();
-  }
+    @RequestMapping(value = "/api/fruits", method = RequestMethod.GET)
+    public List<Fruit> listFruits() {
+        return repository.findAll();
+    }
 
-  @RequestMapping(value = "/api/fruits", method = RequestMethod.POST)
-  public ResponseEntity<Fruit> createFruit(@RequestBody Fruit fruit) {
-    return new ResponseEntity<>(repository.save(fruit), HttpStatus.CREATED);
-  }
+    @RequestMapping(value = "/api/fruits", method = RequestMethod.POST)
+    public ResponseEntity<Fruit> createFruit(@RequestBody Fruit fruit) {
+        return new ResponseEntity<>(repository.save(fruit), HttpStatus.CREATED);
+    }
 }
